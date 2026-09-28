@@ -27,7 +27,7 @@ export default function ProductGrid({ title, products, subcategories }: Props) {
   const list = products.filter((p) => sub === "all" || p.subcategories.includes(sub)).sort(SORTS[sort].fn);
 
   return (
-    <section id="all-products" className="scroll-mt-6 bg-[#f7f2e9] px-4 py-12 sm:px-10 sm:py-16 lg:px-16 xl:px-24">
+    <section id="all-products" className="scroll-mt-6 bg-[#f7f2e9] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="font-serif text-3xl font-bold text-[#10261b] sm:text-4xl">{title}</h2>

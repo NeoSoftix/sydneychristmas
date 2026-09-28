@@ -125,12 +125,12 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden flex-1 justify-center lg:flex">
-          <ul className="flex items-center gap-1 xl:gap-3">
+          <ul className="flex items-center gap-0.5 xl:gap-1 2xl:gap-3">
             {NAV.map((item) => (
               <li key={item.label} className="group relative">
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 rounded-full px-3 py-2 text-[15px] font-medium text-white/95 transition-colors hover:bg-white/10 hover:text-gold"
+                  className="flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[15px] font-medium 2xl:px-3 text-white/95 transition-colors hover:bg-white/10 hover:text-gold"
                 >
                   {item.label}
                   {item.children && (
@@ -162,7 +162,7 @@ export default function Header() {
           {/* Phone */}
           <a
             href={SITE.phoneHref}
-            className="hidden items-center gap-2.5 border-x border-white/25 px-5 xl:flex"
+            className="hidden shrink-0 items-center gap-2.5 whitespace-nowrap border-x border-white/25 px-4 xl:flex 2xl:px-5"
           >
             <PhoneIcon className="h-5 w-5 text-gold" />
             <span className="leading-tight">

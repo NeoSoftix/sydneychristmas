@@ -40,7 +40,7 @@ function CategoryCard({ category, active, hidden }: { category: Category; active
 export default function RangeStrip({ categories, activeSlug, tagline }: Props) {
   return (
     <section className="bg-[#fdfbf7] pt-10 sm:pt-12">
-      <div className="flex flex-wrap items-center gap-x-6 gap-y-3 px-4 sm:px-10 lg:px-16 xl:px-24">
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-3 px-4 sm:px-6 lg:px-8">
         <h2 className="font-serif text-3xl font-bold text-[#10261b] sm:text-4xl">Explore Our Range</h2>
         <span className="hidden h-px w-10 bg-[#10261b]/60 sm:block" aria-hidden />
         {tagline && (
@@ -64,7 +64,7 @@ export default function RangeStrip({ categories, activeSlug, tagline }: Props) {
           style={{ "--marquee-duration": `${categories.length * 4}s` } as React.CSSProperties}
         >
           {[false, true].map((copy) => (
-            <ul key={String(copy)} aria-hidden={copy || undefined} className="flex gap-4 pb-8 pl-4 pt-2">
+            <ul key={String(copy)} aria-hidden={copy || undefined} className="flex gap-4 pb-8 pl-4 pt-2 sm:pl-6 lg:pl-8">
               {categories.map((c) => (
                 <li key={c.slug}>
                   <CategoryCard category={c} active={c.slug === activeSlug} hidden={copy} />

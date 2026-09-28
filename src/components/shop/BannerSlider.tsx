@@ -74,15 +74,15 @@ export default function BannerSlider({ slides }: { slides: BannerSlide[] }) {
             <div
               className={`absolute inset-0 -z-10 ${
                 dark
-                  ? "bg-gradient-to-r from-black/80 via-black/55 to-black/10 lg:from-black/75 lg:via-black/35 lg:to-transparent"
+                  ? "bg-gradient-to-r from-black/80 via-black/55 to-black/10 lg:from-black/80 lg:via-black/45 lg:to-transparent"
                   : "bg-gradient-to-r from-white/90 via-white/70 to-white/10 lg:from-white/85 lg:via-white/45 lg:to-transparent"
               }`}
             />
 
             {/* Top padding clears the floating header + hanging logo, bottom padding the slider controls */}
-            <div className="flex h-full items-center px-4 pb-24 pt-32 sm:px-10 sm:pb-28 sm:pt-36 lg:px-16 lg:pt-40 xl:px-24">
+            <div className="flex h-full items-center px-8 pb-24 pt-32 sm:px-12 sm:pb-28 sm:pt-36 lg:px-14 lg:pt-40">
               <div
-                className={`max-w-xl transition-all 2xl:max-w-2xl delay-300 duration-700 motion-reduce:transition-none ${
+                className={`max-w-xl transition-all lg:max-w-2xl 2xl:max-w-3xl delay-300 duration-700 motion-reduce:transition-none ${
                   active ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
                 } ${dark ? "text-white" : "text-[#10261b]"}`}
               >
@@ -93,7 +93,7 @@ export default function BannerSlider({ slides }: { slides: BannerSlide[] }) {
                 >
                   {s.eyebrow}
                 </p>
-                <h2 className="mt-4 font-serif text-[2rem] font-extrabold leading-[1.05] min-[380px]:text-4xl sm:mt-5 sm:text-6xl lg:text-7xl 2xl:text-8xl">
+                <h2 className="mt-4 font-serif text-[2rem] font-extrabold leading-[1.05] min-[380px]:text-4xl sm:mt-5 sm:text-6xl lg:text-[4.25rem] xl:text-7xl 2xl:text-8xl">
                   {s.title}
                   {s.highlight && (
                     <span className={`block ${dark ? "text-gold-gradient" : "text-[#b00d27]"}`}>{s.highlight}</span>
@@ -150,7 +150,7 @@ export default function BannerSlider({ slides }: { slides: BannerSlide[] }) {
       })}
 
       {/* Controls */}
-      <div className="absolute inset-x-0 bottom-5 z-20 flex items-center justify-between gap-4 px-4 sm:bottom-8 sm:px-10 lg:px-16 xl:px-24">
+      <div className="absolute inset-x-0 bottom-5 z-20 flex items-center justify-between gap-4 px-8 sm:bottom-8 sm:px-12 lg:px-14">
         <div className="flex items-center gap-2" role="tablist" aria-label="Choose slide">
           {slides.map((s, i) => (
             <button

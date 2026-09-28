@@ -45,7 +45,7 @@ export default function FeaturedProducts({ noun, products, subcategories, promo 
   }
 
   return (
-    <section className="bg-[#fdfbf7] px-4 pb-12 pt-10 sm:px-10 sm:pb-16 lg:px-16 xl:px-24">
+    <section className="bg-[#fdfbf7] px-4 pb-12 pt-10 sm:px-6 sm:pb-16 lg:px-8">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
         <h2 className="font-serif text-3xl font-bold text-[#10261b] sm:text-4xl">Featured {noun}</h2>
         <span className="hidden h-px w-10 bg-[#10261b]/60 sm:block" aria-hidden />
